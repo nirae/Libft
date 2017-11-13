@@ -6,11 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:31:05 by ndubouil          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2017/11/13 22:12:09 by ndubouil         ###   ########.fr       */
-=======
-/*   Updated: 2017/11/14 00:00:04 by ndubouil         ###   ########.fr       */
->>>>>>> master
+/*   Updated: 2017/11/14 00:20:28 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,12 +94,9 @@ void	ft_putnbr_fd(int n, int fd);
 //void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 //t_list	*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));
 
-<<<<<<< HEAD
-=======
 /*
 ** My functions
 */
 int		ft_ispositive(int n);
 
->>>>>>> master
 #endif
