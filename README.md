@@ -59,8 +59,8 @@ et ainsi vous faire gagner beaucoup de temps.
 * [x] ft_putstr
 * [ ] ft_putendl
 * [ ] ft_putnbr
-* [ ] ft_putchar_fd
-* [ ] ft_putstr_fd
+* [x] ft_putchar_fd
+* [x] ft_putstr_fd
 * [ ] ft_putendl_fd
 * [ ] ft_putnbr_fd
 
