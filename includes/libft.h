@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:31:05 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/13 21:47:34 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/13 22:09:58 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+
+typedef struct	s_list
+{
+void			*content;
+size_t			content_size;
+struct s_list	*next;
+}				t_list;
 
 /*
 ** Libc
@@ -86,12 +93,5 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));
-
-typedef struct	s_list
-{
-void			*content;
-size_t			content_size;
-struct s_list	*next;
-}				t_list;
 
 #endif
