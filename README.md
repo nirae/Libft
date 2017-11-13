@@ -4,7 +4,9 @@ Le projet libft consiste à écrire une bibliothèque de fonctions utiles que vo
 pourrez ensuite utiliser dans la vaste majorité de vos projets de C cette année
 et ainsi vous faire gagner beaucoup de temps.
 
-## Libc
+## Suivi
+
+### Libc
 
 * [ ] memset
 * [ ] bzero
@@ -35,7 +37,7 @@ et ainsi vous faire gagner beaucoup de temps.
 * [ ] toupper
 * [ ] tolower
 
-## Fonctions supplémentaires
+### Fonctions supplémentaires
 
 * [ ] ft_memalloc
 * [ ] ft_memdel
@@ -62,7 +64,7 @@ et ainsi vous faire gagner beaucoup de temps.
 * [ ] ft_putendl_fd
 * [ ] ft_putnbr_fd
 
-## Partie Bonus
+### Partie Bonus
 
 * [ ] ft_lstnew
 * [ ] ft_lstdelone
@@ -71,4 +73,4 @@ et ainsi vous faire gagner beaucoup de temps.
 * [ ] ft_lstiter
 * [ ] ft_lstmap
 
-## Fonctions Perso
+### Fonctions Perso
