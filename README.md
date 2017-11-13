@@ -57,12 +57,12 @@ et ainsi vous faire gagner beaucoup de temps.
 * [ ] ft_itoa
 * [x] ft_putchar
 * [x] ft_putstr
-* [ ] ft_putendl
-* [ ] ft_putnbr
+* [x] ft_putendl
+* [x] ft_putnbr
 * [x] ft_putchar_fd
 * [x] ft_putstr_fd
-* [ ] ft_putendl_fd
-* [ ] ft_putnbr_fd
+* [x] ft_putendl_fd
+* [x] ft_putnbr_fd
 
 ### Partie Bonus
 
