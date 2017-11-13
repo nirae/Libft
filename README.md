@@ -55,8 +55,8 @@ et ainsi vous faire gagner beaucoup de temps.
 * [ ] ft_strtrim
 * [ ] ft_strsplit
 * [ ] ft_itoa
-* [ ] ft_putchar
-* [ ] ft_putstr
+* [x] ft_putchar
+* [x] ft_putstr
 * [ ] ft_putendl
 * [ ] ft_putnbr
 * [ ] ft_putchar_fd
