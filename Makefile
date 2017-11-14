@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/11/14 00:09:32 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/11/14 09:15:37 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,12 @@ SRC = $(DIR)/ft_putchar.c		\
 	  $(DIR)/ft_putnbr.c		\
 	  $(DIR)/ft_putnbr_fd.c		\
 	  $(DIR)/ft_putendl.c		\
-	  $(DIR)/ft_putendl_fd.c
+	  $(DIR)/ft_putendl_fd.c	\
+	  $(DIR)/ft_strclr.c		\
+	  $(DIR)/ft_striter.c		\
+	  $(DIR)/ft_striteri.c		\
+	  $(DIR)/ft_strequ.c		\
+	  $(DIR)/ft_strnequ.c		\
 
 HEADERS = includes
 INC = -I$(HEADERS)
@@ -36,8 +41,12 @@ OBJ = ft_putchar.o				\
 	  ft_putnbr.o				\
 	  ft_putnbr_fd.o			\
 	  ft_putendl.o				\
-	  ft_putendl_fd.o
-
+	  ft_putendl_fd.o			\
+	  ft_strclr.o				\
+	  ft_striter.o				\
+	  ft_striteri.o				\
+	  ft_strequ.o				\
+	  ft_strnequ.o				\
 
 .PHONY: all clean fclean re
 
