@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:31:05 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/14 10:22:10 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/14 12:28:52 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ typedef struct		s_list
 ** Additionnals functions
 */
 void	*ft_memalloc(size_t size);
-//void	ft_memdel(void **ap);
-//char	*ft_strnew(size_t size);
+void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
 //void	ft_strdel(char **as);
 void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
