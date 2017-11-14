@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:31:05 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/14 09:16:03 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/14 10:22:10 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 # include <stdlib.h>
 # include <string.h>
 
-typedef struct	s_list
+typedef struct		s_list
 {
-void			*content;
-size_t			content_size;
-struct s_list	*next;
-}				t_list;
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
 
 /*
 ** Libc
@@ -40,7 +40,7 @@ struct s_list	*next;
 //char	*ft_strncpy(char * dst, const char * src, size_t len);
 //char	*ft_strcat(char *restrict s1, const char *restrict s2);
 //char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
-//size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
+//size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize);
 //char	*ft_strchr(const char *s, int c);
 //char	*ft_strrchr(const char *s, int c);
 //char	*ft_strstr(const char *haystack, const char *needle);
@@ -59,7 +59,7 @@ struct s_list	*next;
 /*
 ** Additionnals functions
 */
-//void	*ft_memalloc(size_t size);
+void	*ft_memalloc(size_t size);
 //void	ft_memdel(void **ap);
 //char	*ft_strnew(size_t size);
 //void	ft_strdel(char **as);

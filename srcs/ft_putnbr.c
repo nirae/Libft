@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 23:30:31 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/13 23:52:41 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/14 10:15:23 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void		ft_calcul_nb(int nb)
 		ft_putchar(48 - nb);
 }
 
-void	ft_putnbr(int n)
+void			ft_putnbr(int n)
 {
 	if (!ft_ispositive(n))
 	{
