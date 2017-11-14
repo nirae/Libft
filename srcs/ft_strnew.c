@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 23:56:35 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/14 10:15:59 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/11/14 12:30:12 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/11/14 12:39:20 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		ft_calcul_nb(int nb, int fd)
+char	*ft_strnew(size_t size)
 {
-	if (nb >= 10 || nb <= -10)
-	{
-		ft_calcul_nb(nb / 10, fd);
-		ft_calcul_nb(nb % 10, fd);
-	}
-	else if (nb >= 0)
-		ft_putchar_fd(nb + 48, fd);
-	else
-		ft_putchar_fd(48 - nb, fd);
-}
+	char *str;
+	size_t i;
 
-void			ft_putnbr_fd(int n, int fd)
-{
-	if (!ft_ispositive(n))
+	str = (char *)malloc(size + 1);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (i <= size + 1)
 	{
-		ft_putchar_fd('-', fd);
-		ft_calcul_nb(n, fd);
+		str[i] = '\0';
+		i++;
 	}
-	else
-		ft_calcul_nb(n, fd);
+	return (str);
 }

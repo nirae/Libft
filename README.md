@@ -15,7 +15,7 @@ et ainsi vous faire gagner beaucoup de temps.
 * [ ] memmove
 * [ ] memchr
 * [ ] memcmp
-* [ ] strlen
+* [x] strlen
 * [ ] strdup
 * [ ] strcpy
 * [ ] strncpy
@@ -29,27 +29,27 @@ et ainsi vous faire gagner beaucoup de temps.
 * [ ] strcmp
 * [ ] strncmp
 * [ ] atoi
-* [ ] isalpha
-* [ ] isdigit
-* [ ] isalnum
-* [ ] isascii
-* [ ] isprint
-* [ ] toupper
-* [ ] tolower
+* [x] isalpha
+* [x] isdigit
+* [x] isalnum
+* [x] isascii
+* [x] isprint
+* [x] toupper
+* [x] tolower
 
 ### Fonctions supplémentaires
 
-* [ ] ft_memalloc
-* [ ] ft_memdel
-* [ ] ft_strnew
-* [ ] ft_strdel
-* [ ] ft_strclr
-* [ ] ft_striter
-* [ ] ft_striteri
+* [x] ft_memalloc
+* [x] ft_memdel
+* [x] ft_strnew
+* [x] ft_strdel
+* [x] ft_strclr
+* [x] ft_striter
+* [x] ft_striteri
 * [ ] ft_strmap
 * [ ] ft_strmapi
-* [ ] ft_strequ
-* [ ] ft_strnequ
+* [x] ft_strequ
+* [x] ft_strnequ
 * [ ] ft_strsub
 * [ ] ft_strjoin
 * [ ] ft_strtrim

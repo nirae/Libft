@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/11/14 10:11:57 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/11/14 16:38:54 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,20 @@ SRC = $(DIR)/ft_putchar.c		\
 	  $(DIR)/ft_striteri.c		\
 	  $(DIR)/ft_strequ.c		\
 	  $(DIR)/ft_strnequ.c		\
+	  $(DIR)/ft_memalloc.c		\
+	  $(DIR)/ft_memdel.c		\
+	  $(DIR)/ft_strnew.c		\
+	  $(DIR)/ft_strdel.c		\
+	  $(DIR)/ft_strlen.c		\
+	  $(DIR)/ft_isalpha.c		\
+	  $(DIR)/ft_isupper.c		\
+	  $(DIR)/ft_islower.c		\
+	  $(DIR)/ft_toupper.c		\
+	  $(DIR)/ft_tolower.c		\
+	  $(DIR)/ft_isdigit.c		\
+	  $(DIR)/ft_isalnum.c		\
+	  $(DIR)/ft_isascii.c		\
+	  $(DIR)/ft_isprint.c		\
 
 HEADERS = includes
 INC = -I$(HEADERS)
@@ -47,6 +61,20 @@ OBJ = ft_putchar.o				\
 	  ft_striteri.o				\
 	  ft_strequ.o				\
 	  ft_strnequ.o				\
+	  ft_memalloc.o				\
+	  ft_memdel.o				\
+	  ft_strnew.o				\
+	  ft_strdel.o				\
+	  ft_strlen.o				\
+	  ft_isalpha.o				\
+	  ft_isupper.o				\
+	  ft_islower.o				\
+	  ft_toupper.o				\
+	  ft_tolower.o				\
+	  ft_isdigit.o				\
+	  ft_isalnum.o				\
+	  ft_isascii.o				\
+	  ft_isprint.o				\
 
 .PHONY: all clean fclean re
 
