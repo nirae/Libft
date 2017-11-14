@@ -43,13 +43,13 @@ et ainsi vous faire gagner beaucoup de temps.
 * [ ] ft_memdel
 * [ ] ft_strnew
 * [ ] ft_strdel
-* [ ] ft_strclr
-* [ ] ft_striter
-* [ ] ft_striteri
+* [x] ft_strclr
+* [x] ft_striter
+* [x] ft_striteri
 * [ ] ft_strmap
 * [ ] ft_strmapi
-* [ ] ft_strequ
-* [ ] ft_strnequ
+* [x] ft_strequ
+* [x] ft_strnequ
 * [ ] ft_strsub
 * [ ] ft_strjoin
 * [ ] ft_strtrim
