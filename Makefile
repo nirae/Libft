@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/11/14 12:29:48 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/11/14 12:41:41 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRC = $(DIR)/ft_putchar.c		\
 	  $(DIR)/ft_memalloc.c		\
 	  $(DIR)/ft_memdel.c		\
 	  $(DIR)/ft_strnew.c		\
+	  $(DIR)/ft_strdel.c		\
 
 HEADERS = includes
 INC = -I$(HEADERS)
@@ -53,6 +54,7 @@ OBJ = ft_putchar.o				\
 	  ft_memalloc.o				\
 	  ft_memdel.o				\
 	  ft_strnew.o				\
+	  ft_strdel.o				\
 
 .PHONY: all clean fclean re
 
