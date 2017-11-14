@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 23:56:35 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/14 10:15:59 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/11/14 09:01:01 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/11/14 09:15:03 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		ft_calcul_nb(int nb, int fd)
+int		ft_strequ(char const *s1, char const *s2)
 {
-	if (nb >= 10 || nb <= -10)
-	{
-		ft_calcul_nb(nb / 10, fd);
-		ft_calcul_nb(nb % 10, fd);
-	}
-	else if (nb >= 0)
-		ft_putchar_fd(nb + 48, fd);
-	else
-		ft_putchar_fd(48 - nb, fd);
-}
+	unsigned int i;
 
-void			ft_putnbr_fd(int n, int fd)
-{
-	if (!ft_ispositive(n))
+	i = 0;
+	while ((s1[i] != '\0') || (s2[i] != '\0'))
 	{
-		ft_putchar_fd('-', fd);
-		ft_calcul_nb(n, fd);
+		if (s1[i] != s2[i])
+			return (0);
+		i++;
 	}
-	else
-		ft_calcul_nb(n, fd);
+	return (1);
 }
