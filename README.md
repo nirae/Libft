@@ -74,3 +74,8 @@ et ainsi vous faire gagner beaucoup de temps.
 * [ ] ft_lstmap
 
 ### Fonctions Perso
+
+* [x] ft_ispositive
+* [x] ft_isupper
+* [x] ft_islower
+
