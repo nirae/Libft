@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:31:05 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/14 15:50:01 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/15 10:04:16 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,13 +66,13 @@ void	ft_strdel(char **as);
 void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-//char	*ft_strmap(char const *s, char (*f)(char));
-//char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
-//char	*ft_strsub(char const *s, unsigned int start, size_t len);
-//char	*ft_strjoin(char const *s1, char const *s2);
-//char	*ft_strtrim(char const *s);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s);
 //char	**ft_strsplit(char const *s, char c);
 //char	*ft_itoa(int n);
 void	ft_putchar(char c);
@@ -100,6 +100,7 @@ void	ft_putnbr_fd(int n, int fd);
 int		ft_ispositive(int n);
 int		ft_isupper(int c);
 int		ft_islower(int c);
+int		ft_isblank(int c);
 
 
 #endif

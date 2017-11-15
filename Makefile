@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/11/14 15:50:10 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/11/15 10:03:37 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,12 @@ SRC = $(DIR)/ft_putchar.c		\
 	  $(DIR)/ft_isalnum.c		\
 	  $(DIR)/ft_isascii.c		\
 	  $(DIR)/ft_isprint.c		\
+	  $(DIR)/ft_strmap.c		\
+	  $(DIR)/ft_strmapi.c		\
+	  $(DIR)/ft_strsub.c		\
+	  $(DIR)/ft_strjoin.c		\
+	  $(DIR)/ft_strtrim.c		\
+	  $(DIR)/ft_isblank.c		\
 
 HEADERS = includes
 INC = -I$(HEADERS)
@@ -75,6 +81,12 @@ OBJ = ft_putchar.o				\
 	  ft_isalnum.o				\
 	  ft_isascii.o				\
 	  ft_isprint.o				\
+	  ft_strmap.o				\
+	  ft_strmapi.o				\
+	  ft_strsub.o				\
+	  ft_strjoin.o				\
+	  ft_strtrim.o				\
+	  ft_isblank.o				\
 
 .PHONY: all clean fclean re
 
