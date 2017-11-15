@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 09:51:52 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/15 13:18:29 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/15 21:21:27 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ char		*ft_strtrim(char const *s)
 
 	len = ft_strlen(s) - 1;
 	i = 0;
-	while (ft_isblank(s[i]))
+	while (ft_isspace(s[i]))
 		i++;
 	start_position = i;
 	if (start_position > len)
 		return (result = ft_strnew(sizeof(char) * 1));
 	i = 0;
-	while (ft_isblank(s[len - i]))
+	while (ft_isspace(s[len - i]))
 		i++;
 	end_position = len - i;
 	len = (end_position - start_position) + 1;

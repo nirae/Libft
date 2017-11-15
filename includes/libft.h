@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:31:05 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/15 15:11:47 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/15 21:18:15 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ void	ft_putnbr_fd(int n, int fd);
 int		ft_ispositive(int n);
 int		ft_isupper(int c);
 int		ft_islower(int c);
-int		ft_isblank(int c);
+int		ft_isspace(int c);
 
 
 #endif
