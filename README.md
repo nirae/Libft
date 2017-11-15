@@ -16,9 +16,9 @@ et ainsi vous faire gagner beaucoup de temps.
 * [ ] memchr
 * [ ] memcmp
 * [x] strlen
-* [ ] strdup
-* [ ] strcpy
-* [ ] strncpy
+* [x] strdup
+* [x] strcpy
+* [x] strncpy
 * [ ] strcat
 * [ ] strncat
 * [ ] strlcat
