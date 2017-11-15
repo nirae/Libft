@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 10:22:31 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/14 11:30:34 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/15 09:29:33 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memalloc(size_t size)
 {
-	char *result;
-	size_t i;
+	char	*result;
+	size_t	i;
 
 	result = (void *)malloc(size);
 	if (result == NULL)

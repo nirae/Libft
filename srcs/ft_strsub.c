@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 15:18:17 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/15 08:29:55 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/11/15 08:45:14 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/11/15 13:06:05 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	if (ft_islower(c))
-		return (c - 32);
-	return (c);
+	char			*result;
+	unsigned int	i;
+
+	result = (char *)malloc(sizeof(char) * (len + 1));
+	if (result == NULL)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		result[i] = s[start + i];
+		i++;
+	}
+	result[i] = '\0';
+	return (result);
 }

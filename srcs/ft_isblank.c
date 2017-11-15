@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_isblank.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 15:18:17 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/15 08:29:55 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/11/15 10:04:27 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/11/15 10:07:51 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c)
+int		ft_isblank(int c)
 {
-	if (ft_islower(c))
-		return (c - 32);
-	return (c);
+	if (c == '\t' || c == '\n' || c == ' ')
+		return (1);
+	return (0);
 }
