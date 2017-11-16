@@ -16,9 +16,9 @@ et ainsi vous faire gagner beaucoup de temps.
 * [ ] memchr
 * [ ] memcmp
 * [x] strlen
-* [ ] strdup
-* [ ] strcpy
-* [ ] strncpy
+* [x] strdup
+* [x] strcpy
+* [x] strncpy
 * [ ] strcat
 * [ ] strncat
 * [ ] strlcat
@@ -46,13 +46,13 @@ et ainsi vous faire gagner beaucoup de temps.
 * [x] ft_strclr
 * [x] ft_striter
 * [x] ft_striteri
-* [ ] ft_strmap
-* [ ] ft_strmapi
+* [x] ft_strmap
+* [x] ft_strmapi
 * [x] ft_strequ
 * [x] ft_strnequ
-* [ ] ft_strsub
-* [ ] ft_strjoin
-* [ ] ft_strtrim
+* [x] ft_strsub
+* [x] ft_strjoin
+* [x] ft_strtrim
 * [ ] ft_strsplit
 * [ ] ft_itoa
 * [x] ft_putchar
@@ -78,4 +78,5 @@ et ainsi vous faire gagner beaucoup de temps.
 * [x] ft_ispositive
 * [x] ft_isupper
 * [x] ft_islower
+* [x] ft_isblank
 
