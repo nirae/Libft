@@ -6,25 +6,25 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 14:22:15 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/15 14:50:52 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/16 08:14:44 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(const char *s1)
 {
 	char	*str;
 	size_t	size;
-	int i;
+	int		i;
 
-	size = ft_strlen(s);
+	size = ft_strlen(s1);
 	if (!(str = ft_strnew(sizeof(char) * size)))
 		return (NULL);
 	i = 0;
-	while (s[i] != '\0')
+	while (s1[i] != '\0')
 	{
-		str[i] = s[i];
+		str[i] = s1[i];
 		i++;
 	}
 	return (str);

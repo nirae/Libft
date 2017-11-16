@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 15:12:31 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/16 07:43:14 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/11/16 07:58:47 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/11/16 08:09:23 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	size_t i;
+	size_t j;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
-	{
-		dst[i] = src[i];
+	j = 0;
+	while (s1[i] != '\0')
 		i++;
-	}
-	while (i < n)
+	while (s2[j] != '\0' && j < n)
 	{
-		dst[i] = '\0';
+		s1[i] = s2[j];
 		i++;
+		j++;
 	}
-	return (dst);
+	s1[i] = '\0';
+	return (s1);
 }
