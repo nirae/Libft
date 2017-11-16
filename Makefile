@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/11/15 15:26:32 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/11/16 11:27:34 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,10 +48,15 @@ SRC = $(DIR)/ft_putchar.c		\
 	  $(DIR)/ft_strsub.c		\
 	  $(DIR)/ft_strjoin.c		\
 	  $(DIR)/ft_strtrim.c		\
-	  $(DIR)/ft_isblank.c		\
+	  $(DIR)/ft_isspace.c		\
 	  $(DIR)/ft_strdup.c		\
 	  $(DIR)/ft_strcpy.c		\
 	  $(DIR)/ft_strncpy.c		\
+	  $(DIR)/ft_strcat.c		\
+	  $(DIR)/ft_strncat.c		\
+	  $(DIR)/ft_strlcat.c		\
+	  $(DIR)/ft_strchr.c		\
+	  $(DIR)/ft_strrchr.c		\
 
 HEADERS = includes
 INC = -I$(HEADERS)
@@ -89,10 +94,15 @@ OBJ = ft_putchar.o				\
 	  ft_strsub.o				\
 	  ft_strjoin.o				\
 	  ft_strtrim.o				\
-	  ft_isblank.o				\
+	  ft_isspace.o				\
 	  ft_strdup.o				\
 	  ft_strcpy.o				\
 	  ft_strncpy.o				\
+	  ft_strcat.o				\
+	  ft_strncat.o				\
+	  ft_strlcat.o				\
+	  ft_strchr.o				\
+	  ft_strrchr.o				\
 
 .PHONY: all clean fclean re
 
