@@ -19,11 +19,11 @@ et ainsi vous faire gagner beaucoup de temps.
 * [x] strdup
 * [x] strcpy
 * [x] strncpy
-* [ ] strcat
-* [ ] strncat
-* [ ] strlcat
-* [ ] strchr
-* [ ] strrchr
+* [x] strcat
+* [x] strncat
+* [x] strlcat
+* [x] strchr
+* [x] strrchr
 * [ ] strstr
 * [ ] strnstr
 * [ ] strcmp
