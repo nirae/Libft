@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 23:44:59 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/13 23:45:59 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/16 14:35:45 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_ispositive(int n)
 {
-	if (n > 0)
+	if (n >= 0)
 		return (1);
 	else
 		return (0);
