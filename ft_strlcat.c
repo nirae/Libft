@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 08:11:21 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/16 14:33:19 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/19 21:52:27 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,20 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 	size_t src_len;
 
 	i = 0;
-	j = 0;
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
+	j = dst_len;
 	if (dst_len + 1 > size)
 		return (src_len + size);
-	while (dst[i] != '\0')
-		i++;
-	while (i < size - 1)
+	else if (dst_len + 1 < size)
 	{
-		dst[i] = src[j];
-		i++;
-		j++;
+		while (j < size - 1)
+		{
+			dst[j] = src[i];
+			i++;
+			j++;
+		}
+		dst[j] = '\0';
 	}
-	dst[i] = '\0';
 	return (src_len + dst_len);
 }
