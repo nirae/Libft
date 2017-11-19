@@ -21,13 +21,13 @@ et ainsi vous faire gagner beaucoup de temps.
 * [x] strncpy
 * [x] strcat
 * [x] strncat
-* [x] strlcat
+* [ ] strlcat
 * [x] strchr
 * [x] strrchr
-* [ ] strstr
-* [ ] strnstr
-* [ ] strcmp
-* [ ] strncmp
+* [x] strstr
+* [x] strnstr
+* [x] strcmp
+* [x] strncmp
 * [ ] atoi
 * [x] isalpha
 * [x] isdigit
