@@ -21,14 +21,14 @@ et ainsi vous faire gagner beaucoup de temps.
 * [x] strncpy
 * [x] strcat
 * [x] strncat
-* [x] strlcat
+* [ ] strlcat
 * [x] strchr
 * [x] strrchr
-* [ ] strstr
-* [ ] strnstr
-* [ ] strcmp
-* [ ] strncmp
-* [ ] atoi
+* [x] strstr
+* [x] strnstr
+* [x] strcmp
+* [x] strncmp
+* [x] atoi
 * [x] isalpha
 * [x] isdigit
 * [x] isalnum
@@ -54,7 +54,7 @@ et ainsi vous faire gagner beaucoup de temps.
 * [x] ft_strjoin
 * [x] ft_strtrim
 * [ ] ft_strsplit
-* [ ] ft_itoa
+* [x] ft_itoa
 * [x] ft_putchar
 * [x] ft_putstr
 * [x] ft_putendl
@@ -78,5 +78,7 @@ et ainsi vous faire gagner beaucoup de temps.
 * [x] ft_ispositive
 * [x] ft_isupper
 * [x] ft_islower
-* [x] ft_isblank
+* [x] ft_isspace_tab_nl
+* [x] ft_isspace
+* [x] ft_strrev
 
