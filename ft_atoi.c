@@ -1,21 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isspace.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/20 08:01:47 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/20 08:06:22 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/11/20 07:49:37 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/11/20 08:14:33 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isspace(int c)
+int		ft_atoi(const char *str)
 {
-	if (c == 32 || c == '\f' || c == '\n' || c == '\r' 
-			|| c == '\t' || c == '\v')
-		return (1);
-	return (0);
+	int i;
+	int is_neg;
+	int result;
+
+	result = 0;
+	i = 0;
+	while (ft_isspace(str[i]))
+		i++;
+	if (str[i] == '-')
+		is_neg = 1;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (ft_isdigit(str[i]))
+	{
+		result = (str[i] - '0') + result * 10;
+		i++;
+	}
+	if (is_neg)
+		return (-result);
+	return (result);
 }

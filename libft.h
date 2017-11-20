@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:31:05 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/19 22:55:46 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/20 08:01:36 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-//int		ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -100,7 +100,7 @@ void	ft_putnbr_fd(int n, int fd);
 int		ft_ispositive(int n);
 int		ft_isupper(int c);
 int		ft_islower(int c);
+int		ft_isspace_tab_nl(int c);
 int		ft_isspace(int c);
-
 
 #endif
