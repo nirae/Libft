@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 08:23:34 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/20 15:27:02 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/20 22:08:37 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,19 @@ static char		*ft_strrev(char *str)
 	return (str);
 }
 
+static int	ft_count(int n)
+{
+	int i;
+
+	i = 1;
+	while (n >= 10)
+	{
+		n = n / 10;
+		i++;
+	}
+	return (i - 1);
+}
+
 char	*ft_itoa(int n)
 {
 	int		isneg;
@@ -41,30 +54,21 @@ char	*ft_itoa(int n)
 	int		i;
 	char	*result;
 
-	if (!ft_ispositive(n))
-	{
-		isneg = 1;
+	if (n < -2147483647)
+		return (ft_strdup("-2147483648"));
+	if ((isneg = !ft_ispositive(n)))
 		n = -n;
-	}
-	len = 1;
-	i = n;
-	while (i >= 10)
-	{
-		i = i / 10;
-		len++;
-	}
-	len--;
+	len = ft_count(n);
 	if (!(result = ft_strnew(len + isneg)))
 		return (0);
 	i = 0;
 	while (i <= len)
 	{
-		result[i] = (n % 10) + '0';
+		result[i++] = (n % 10) + '0';
 		n = n / 10;
-		i++;
 	}
 	if (isneg)
 		result[i] = '-';
-	result = ft_strrev(result);
-	return (result);
+	return (ft_strrev(result));
 }
+
