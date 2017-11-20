@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/11/20 08:22:57 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/11/20 22:18:40 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,6 +63,8 @@ SRC = ft_putchar.c		\
 	  ft_atoi.c			\
 	  ft_isspace.c		\
 	  ft_itoa.c			\
+	  ft_strrev.c		\
+	  ft_strsplit.c		\
 
 
 OBJ = ft_putchar.o			\
@@ -114,6 +116,8 @@ OBJ = ft_putchar.o			\
 	  ft_atoi.o				\
 	  ft_isspace.o			\
 	  ft_itoa.o				\
+	  ft_strrev.o			\
+	  ft_strsplit.o			\
 
 .PHONY: all clean fclean re
 
