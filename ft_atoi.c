@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/16 11:32:49 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/20 07:42:49 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/11/20 07:49:37 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/11/20 08:14:33 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+int		ft_atoi(const char *str)
 {
 	int i;
-	int j;
+	int is_neg;
+	int result;
 
-	if (ft_strlen(needle) == 0)
-		return ((char *)haystack);
+	result = 0;
 	i = 0;
-	while (haystack[i] != '\0')
+	while (ft_isspace(str[i]))
+		i++;
+	if (str[i] == '-')
+		is_neg = 1;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (ft_isdigit(str[i]))
 	{
-		j = 0;
-		while (haystack[i + j] == needle[j])
-		{
-			j++;
-			if (needle[j] == '\0')
-				return ((char *)&haystack[i]);
-		}
+		result = (str[i] - '0') + result * 10;
 		i++;
 	}
-	return (0);
+	if (is_neg)
+		return (-result);
+	return (result);
 }

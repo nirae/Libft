@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 22:54:02 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/19 23:19:17 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/20 07:43:19 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		{
 			j++;
 			if (needle[j] == '\0')
-			return ((char *)&haystack[i]);
+				return ((char *)&haystack[i]);
 		}
 		i++;
 	}
