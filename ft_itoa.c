@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 08:23:34 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/20 22:14:04 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/21 07:54:53 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_count(int n)
 {
-	int i;
+	int		i;
 
 	i = 1;
 	while (n >= 10)
@@ -25,7 +25,7 @@ static int	ft_count(int n)
 	return (i - 1);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int		isneg;
 	int		len;
@@ -49,4 +49,3 @@ char	*ft_itoa(int n)
 		result[i] = '-';
 	return (ft_strrev(result));
 }
-
