@@ -8,20 +8,20 @@ et ainsi vous faire gagner beaucoup de temps.
 
 ### Libc
 
-* [ ] memset
-* [ ] bzero
-* [ ] memcpy
-* [ ] memccpy
-* [ ] memmove
-* [ ] memchr
-* [ ] memcmp
+* [x] memset
+* [x] bzero
+* [x] memcpy
+* [x] memccpy
+* [x] memmove
+* [x] memchr
+* [x] memcmp
 * [x] strlen
 * [x] strdup
 * [x] strcpy
 * [x] strncpy
 * [x] strcat
 * [x] strncat
-* [ ] strlcat
+* [x] strlcat
 * [x] strchr
 * [x] strrchr
 * [x] strstr
@@ -81,4 +81,3 @@ et ainsi vous faire gagner beaucoup de temps.
 * [x] ft_isspace_tab_nl
 * [x] ft_isspace
 * [x] ft_strrev
-
