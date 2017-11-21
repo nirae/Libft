@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/11/19 23:24:39 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/11/20 22:44:47 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ SRC = ft_putchar.c		\
 	  ft_strsub.c		\
 	  ft_strjoin.c		\
 	  ft_strtrim.c		\
-	  ft_isspace.c		\
+	  ft_isspace_tab_nl.c	\
 	  ft_strdup.c		\
 	  ft_strcpy.c		\
 	  ft_strncpy.c		\
@@ -60,6 +60,11 @@ SRC = ft_putchar.c		\
 	  ft_strncmp.c		\
 	  ft_strstr.c		\
 	  ft_strnstr.c		\
+	  ft_atoi.c			\
+	  ft_isspace.c		\
+	  ft_itoa.c			\
+	  ft_strrev.c		\
+	  ft_strsplit.c		\
 
 
 OBJ = ft_putchar.o			\
@@ -95,7 +100,7 @@ OBJ = ft_putchar.o			\
 	  ft_strsub.o			\
 	  ft_strjoin.o			\
 	  ft_strtrim.o			\
-	  ft_isspace.o			\
+	  ft_isspace_tab_nl.o			\
 	  ft_strdup.o			\
 	  ft_strcpy.o			\
 	  ft_strncpy.o			\
@@ -108,6 +113,11 @@ OBJ = ft_putchar.o			\
 	  ft_strncmp.o			\
 	  ft_strstr.o			\
 	  ft_strnstr.o			\
+	  ft_atoi.o				\
+	  ft_isspace.o			\
+	  ft_itoa.o				\
+	  ft_strrev.o			\
+	  ft_strsplit.o			\
 
 .PHONY: all clean fclean re
 
