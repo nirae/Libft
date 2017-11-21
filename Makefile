@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/11/20 22:18:40 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/11/21 14:07:13 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,59 +65,16 @@ SRC = ft_putchar.c		\
 	  ft_itoa.c			\
 	  ft_strrev.c		\
 	  ft_strsplit.c		\
+	  ft_memset.c		\
+	  ft_memcpy.c		\
+	  ft_memmove.c		\
+	  ft_memccpy.c		\
+	  ft_memchr.c		\
+	  ft_memcmp.c		\
+	  ft_bzero.c		\
 
 
-OBJ = ft_putchar.o			\
-	  ft_putstr.o			\
-	  ft_putchar_fd.o		\
-	  ft_putstr_fd.o		\
-	  ft_ispositive.o		\
-	  ft_putnbr.o			\
-	  ft_putnbr_fd.o		\
-	  ft_putendl.o			\
-	  ft_putendl_fd.o		\
-	  ft_strclr.o			\
-	  ft_striter.o			\
-	  ft_striteri.o			\
-	  ft_strequ.o			\
-	  ft_strnequ.o			\
-	  ft_memalloc.o			\
-	  ft_memdel.o			\
-	  ft_strnew.o			\
-	  ft_strdel.o			\
-	  ft_strlen.o			\
-	  ft_isalpha.o			\
-	  ft_isupper.o			\
-	  ft_islower.o			\
-	  ft_toupper.o			\
-	  ft_tolower.o			\
-	  ft_isdigit.o			\
-	  ft_isalnum.o			\
-	  ft_isascii.o			\
-	  ft_isprint.o			\
-	  ft_strmap.o			\
-	  ft_strmapi.o			\
-	  ft_strsub.o			\
-	  ft_strjoin.o			\
-	  ft_strtrim.o			\
-	  ft_isspace_tab_nl.o			\
-	  ft_strdup.o			\
-	  ft_strcpy.o			\
-	  ft_strncpy.o			\
-	  ft_strcat.o			\
-	  ft_strncat.o			\
-	  ft_strlcat.o			\
-	  ft_strchr.o			\
-	  ft_strrchr.o			\
-	  ft_strcmp.o			\
-	  ft_strncmp.o			\
-	  ft_strstr.o			\
-	  ft_strnstr.o			\
-	  ft_atoi.o				\
-	  ft_isspace.o			\
-	  ft_itoa.o				\
-	  ft_strrev.o			\
-	  ft_strsplit.o			\
+OBJ = $(SRC:.c=.o)
 
 .PHONY: all clean fclean re
 
@@ -127,6 +84,9 @@ $(NAME):
 			$(CC) $(CFLAGS) $(SRC)
 			ar rc $(NAME) $(OBJ)
 			ranlib $(NAME)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -o $@ $<
 
 clean:
 			/bin/rm -f $(OBJ)
