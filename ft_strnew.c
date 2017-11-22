@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 12:30:12 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/22 12:13:31 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/22 20:21:52 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnew(size_t size)
 	if (!str)
 		return (NULL);
 	i = 0;
-	while (i <= size + 1)
+	while (i < size + 1)
 	{
 		str[i] = '\0';
 		i++;
