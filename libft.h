@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:31:05 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/21 14:08:06 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/22 08:34:22 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,6 @@ int		ft_islower(int c);
 int		ft_isspace_tab_nl(int c);
 int		ft_isspace(int c);
 char	*ft_strrev(char *str);
+int		ft_count_words(char *str, char sep);
 
 #endif

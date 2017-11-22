@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 07:49:37 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/20 08:14:33 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/22 12:08:52 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int		ft_atoi(const char *str)
 
 	result = 0;
 	i = 0;
+	is_neg = 0;
 	while (ft_isspace(str[i]))
 		i++;
 	if (str[i] == '-')

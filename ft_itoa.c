@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 08:23:34 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/21 07:54:53 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/22 12:21:45 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char		*ft_itoa(int n)
 	if ((isneg = !ft_ispositive(n)))
 		n = -n;
 	len = ft_count(n);
-	if (!(result = ft_strnew(len + isneg)))
+	if (!(result = ft_strnew(len + isneg + 1)))
 		return (0);
 	i = 0;
 	while (i <= len)
