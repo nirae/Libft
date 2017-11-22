@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 08:42:34 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/14 08:56:40 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/22 14:41:23 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	size_t i;
 
-	i = 0;
-	while (s[i] != '\0')
+	if (s != NULL && f != NULL)
 	{
-		f(i, &s[i]);
-		i++;
+		i = 0;
+		while (s[i] != '\0')
+		{
+			f(i, &s[i]);
+			i++;
+		}
 	}
 }

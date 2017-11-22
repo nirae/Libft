@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 09:51:52 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/21 14:40:25 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/22 13:54:28 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char		*ft_strtrim(char const *s)
 	size_t	start_position;
 	size_t	end_position;
 
+	if (s == NULL)
+		return (NULL);
 	len = ft_strlen(s) - 1;
 	i = 0;
 	while (ft_isspace_tab_nl(s[i]))

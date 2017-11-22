@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/11/21 15:34:52 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/11/22 15:37:34 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,8 @@ SRC = ft_putchar.c		\
 	  ft_memchr.c		\
 	  ft_memcmp.c		\
 	  ft_bzero.c		\
+	  ft_strsplit.c		\
+	  ft_count_words.c	\
 
 
 OBJ = $(SRC:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 12:33:54 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/21 13:08:29 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/22 15:27:09 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	char			*str1;
 	char			*str2;
 
+	if (s1 == NULL || s2 == NULL)
+		return (0);
 	str1 = (char *)s1;
 	str2 = (char *)s2;
 	i = 0;
