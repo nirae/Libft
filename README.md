@@ -53,7 +53,7 @@ et ainsi vous faire gagner beaucoup de temps.
 * [x] ft_strsub
 * [x] ft_strjoin
 * [x] ft_strtrim
-* [ ] ft_strsplit
+* [x] ft_strsplit
 * [x] ft_itoa
 * [x] ft_putchar
 * [x] ft_putstr
@@ -81,3 +81,4 @@ et ainsi vous faire gagner beaucoup de temps.
 * [x] ft_isspace_tab_nl
 * [x] ft_isspace
 * [x] ft_strrev
+* [x] ft_count_words
