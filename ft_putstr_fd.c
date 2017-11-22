@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 16:33:05 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/13 16:34:32 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/22 14:06:26 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,13 @@ void	ft_putstr_fd(char const *s, int fd)
 {
 	size_t i;
 
-	i = 0;
-	while (s[i] != '\0')
+	if (s != NULL)
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		i = 0;
+		while (s[i] != '\0')
+		{
+			ft_putchar_fd(s[i], fd);
+			i++;
+		}
 	}
 }

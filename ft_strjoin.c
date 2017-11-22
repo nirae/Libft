@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 09:00:17 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/15 09:49:48 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/22 13:58:04 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
-	result = (char *)malloc(sizeof(char) + (ft_strlen(s1) + ft_strlen(s2)) + 1);
-	if (result == NULL)
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	if (!(result = ft_strnew(ft_strlen(s1) + ft_strlen(s2) + 1)))
 		return (NULL);
 	j = 0;
 	i = 0;

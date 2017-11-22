@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 08:31:13 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/15 08:32:25 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/22 13:57:34 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	size;
 	char	*result;
 
+	if (s == NULL)
+		return (NULL);
 	size = ft_strlen(s);
 	result = (char *)malloc(sizeof(char) * (size + 1));
 	if (result == NULL)

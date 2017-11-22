@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 00:02:47 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/14 00:03:45 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/22 14:04:53 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,14 @@ void	ft_putendl(char const *s)
 {
 	size_t i;
 
-	i = 0;
-	while (s[i] != '\0')
+	if (s != NULL)
 	{
-		ft_putchar(s[i]);
-		i++;
+		i = 0;
+		while (s[i] != '\0')
+		{
+			ft_putchar(s[i]);
+			i++;
+		}
+		ft_putchar('\n');
 	}
-	ft_putchar('\n');
 }
