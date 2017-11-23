@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/11/22 15:37:34 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/11/23 08:06:06 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,13 +82,10 @@ OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(OBJ)
 			$(CC) $(CFLAGS) $(SRC)
 			ar rc $(NAME) $(OBJ)
 			ranlib $(NAME)
-
-%.o: %.c
-	$(CC) $(CFLAGS) -o $@ $<
 
 clean:
 			/bin/rm -f $(OBJ)
