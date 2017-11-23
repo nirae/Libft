@@ -66,12 +66,12 @@ et ainsi vous faire gagner beaucoup de temps.
 
 ### Partie Bonus
 
-* [ ] ft_lstnew
-* [ ] ft_lstdelone
-* [ ] ft_lstdel
-* [ ] ft_lstadd
-* [ ] ft_lstiter
-* [ ] ft_lstmap
+* [x] ft_lstnew
+* [x] ft_lstdelone
+* [x] ft_lstdel
+* [x] ft_lstadd
+* [x] ft_lstiter
+* [x] ft_lstmap
 
 ### Fonctions Perso
 
@@ -82,3 +82,4 @@ et ainsi vous faire gagner beaucoup de temps.
 * [x] ft_isspace
 * [x] ft_strrev
 * [x] ft_count_words
+* [x] ft_isblank

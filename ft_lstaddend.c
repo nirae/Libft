@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_lstend.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 08:29:01 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/23 10:44:35 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/11/23 17:50:03 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/11/23 21:25:42 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+void	ft_lstaddend(t_list **alst, t_list *new)
 {
-	size_t i;
+	t_list *temp;
+	t_list *list;
 
-	if (s != NULL && f != NULL)
+	if (new != NULL)
 	{
-		i = 0;
-		while (s[i] != '\0')
-		{
-			f(&s[i]);
-			i++;
-		}
+		temp = *alst;
+		list = *alst;
+		while (*temp != NULL)
+			*temp = *temp->next;
+		*temp->next = new;
+		*alst = list;
 	}
 }
