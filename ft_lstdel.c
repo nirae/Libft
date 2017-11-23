@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 08:29:01 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/23 10:44:35 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/11/23 11:42:30 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/11/23 13:04:25 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	size_t i;
+	t_list	*temp;
 
-	if (s != NULL && f != NULL)
+	if (alst != NULL && del != NULL)
 	{
-		i = 0;
-		while (s[i] != '\0')
+		while (*alst != NULL)
 		{
-			f(&s[i]);
-			i++;
+			temp = (*alst)->next;
+			ft_lstdelone(alst, del);
+			*alst = temp;
 		}
 	}
 }

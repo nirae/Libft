@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 08:29:01 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/23 10:44:35 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/11/23 15:33:59 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/11/23 15:35:16 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	size_t i;
-
-	if (s != NULL && f != NULL)
-	{
-		i = 0;
-		while (s[i] != '\0')
-		{
-			f(&s[i]);
-			i++;
-		}
-	}
+	
 }
