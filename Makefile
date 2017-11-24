@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/11/23 21:43:46 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/11/24 08:28:59 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,13 @@ SRC = ft_putchar.c			\
 	  ft_lstiter.c			\
 	  ft_lstmap.c			\
 	  ft_isblank.c			\
+	  ft_str_is_alpha.c		\
+	  ft_str_is_lowercase.c	\
+	  ft_str_is_uppercase.c	\
+	  ft_iscntrl.c			\
+	  ft_isgraph.c			\
+	  ft_str_is_numeric.c	\
+	  ft_str_is_printable.c	\
 
 OBJ = $(SRC:.c=.o)
 

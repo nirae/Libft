@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:31:05 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/23 21:44:28 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/11/24 08:29:22 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list	*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 /*
 ** My functions
@@ -105,5 +105,12 @@ int		ft_isspace(int c);
 char	*ft_strrev(char *str);
 int		ft_count_words(char *str, char sep);
 int		ft_isblank(int c);
+int		ft_str_is_alpha(char *str);
+int		ft_str_is_lowercase(char *str);
+int		ft_str_is_uppercase(char *str);
+int		ft_iscntrl(int c);
+int		ft_isgraph(int c);
+int		ft_str_is_numeric(char *str);
+int		ft_str_is_printable(char *str);
 
 #endif
