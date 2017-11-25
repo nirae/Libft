@@ -6,12 +6,15 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/11/24 10:18:33 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/11/25 15:55:01 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -c
+CC = /usr/bin/gcc
+AR = /usr/bin/ar
+RANLIB = /usr/bin/ranlib
+RM = /bin/rm
+CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 
 SRC = ft_putchar.c			\
@@ -95,15 +98,16 @@ OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-			$(CC) $(CFLAGS) $(SRC)
-			ar rc $(NAME) $(OBJ)
-			ranlib $(NAME)
+$(NAME):	
+			@$(CC) $(CFLAGS) -c $(SRC)
+			@echo "Building $(NAME)"
+			@$(AR) rc $(NAME) $(OBJ)
+			@$(RANLIB) $(NAME)
 
 clean:
-			/bin/rm -f $(OBJ)
+			@$(RM) -f $(OBJ)
 
 fclean: clean
-			/bin/rm -f $(NAME)
+			@$(RM) -f $(NAME)
 
 re: fclean all
