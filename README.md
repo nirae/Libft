@@ -83,3 +83,10 @@ et ainsi vous faire gagner beaucoup de temps.
 * [x] ft_strrev
 * [x] ft_count_words
 * [x] ft_isblank
+* [x] ft_str_is_alpha
+* [x] ft_str_is_lowercase
+* [x] ft_str_is_uppercase
+* [x] ft_iscntrl
+* [x] ft_isgraph
+* [x] ft_str_is_numeric
+* [x] ft_str_is_printable
