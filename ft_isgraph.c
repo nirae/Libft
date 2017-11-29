@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ispositive.c                                    :+:      :+:    :+:   */
+/*   ft_isgraph.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 23:44:59 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/25 15:53:58 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/11/24 08:18:41 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/11/24 08:22:24 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_ispositive(int n)
+int		ft_isgraph(int c)
 {
-	if (n >= 0)
+	if (c >= 33 && c <= 126)
 		return (1);
-	else
-		return (0);
+	return (0);
 }

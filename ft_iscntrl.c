@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ispositive.c                                    :+:      :+:    :+:   */
+/*   ft_iscntrl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 23:44:59 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/25 15:53:58 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/11/24 08:16:18 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/11/24 08:18:14 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_ispositive(int n)
+int		ft_iscntrl(int c)
 {
-	if (n >= 0)
+	if ((c >= 0 && c <= 31) || c == 127)
 		return (1);
-	else
-		return (0);
+	return (0);
 }
