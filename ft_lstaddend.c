@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstend.c                                        :+:      :+:    :+:   */
+/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/23 17:50:03 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/23 21:25:42 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/05 22:59:19 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	ft_lstaddend(t_list **alst, t_list *new)
 	{
 		temp = *alst;
 		list = *alst;
-		while (*temp != NULL)
-			*temp = *temp->next;
-		*temp->next = new;
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = new;
 		*alst = list;
 	}
 }
