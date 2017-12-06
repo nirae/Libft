@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/12/05 22:54:52 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/12/06 20:18:36 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,6 +92,9 @@ SRC = ft_putchar.c			\
 	  ft_str_is_numeric.c	\
 	  ft_str_is_printable.c	\
 	  ft_lstaddend.c		\
+	  ft_lstlen.c			\
+	  ft_sqrt.c				\
+	  ft_lsti.c				\
 
 OBJ = $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:31:05 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/05 22:54:14 by ndubouil         ###   ########.fr       */
+/*   Updated: 2017/12/06 20:20:46 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,5 +114,8 @@ int					ft_isgraph(int c);
 int					ft_str_is_numeric(char *str);
 int					ft_str_is_printable(char *str);
 void				ft_lstaddend(t_list **alst, t_list *new);
+int					ft_lstlen(t_list *lst);
+int					ft_sqrt(int n);
+t_list				*ft_lsti(t_list *lst, int i);
 
 #endif
