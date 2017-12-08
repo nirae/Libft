@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/11/25 15:55:01 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/12/06 23:18:17 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,6 +91,13 @@ SRC = ft_putchar.c			\
 	  ft_isgraph.c			\
 	  ft_str_is_numeric.c	\
 	  ft_str_is_printable.c	\
+	  ft_lstaddend.c		\
+<<<<<<< HEAD
+=======
+	  ft_lstlen.c			\
+	  ft_sqrt.c				\
+	  ft_lsti.c				\
+>>>>>>> master
 
 OBJ = $(SRC:.c=.o)
 
@@ -99,10 +106,11 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME):	
+			@echo "Building $(NAME) ..."
 			@$(CC) $(CFLAGS) -c $(SRC)
-			@echo "Building $(NAME)"
 			@$(AR) rc $(NAME) $(OBJ)
 			@$(RANLIB) $(NAME)
+			@echo "$(NAME) is build"
 
 clean:
 			@$(RM) -f $(OBJ)

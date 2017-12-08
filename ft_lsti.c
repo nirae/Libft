@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
+/*   ft_lsti.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/23 17:50:03 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/05 22:59:19 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/12/06 20:20:53 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/12/06 23:08:36 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstaddend(t_list **alst, t_list *new)
+t_list		*ft_lsti(t_list *lst, int i)
 {
-	t_list *temp;
-	t_list *list;
+	int j;
 
-	if (new != NULL)
+
+	if (lst == NULL || i > ft_lstlen(lst))
+		return (NULL);
+	
+	j = 0;
+	while (j < i)
 	{
-		temp = *alst;
-		list = *alst;
-		while (temp->next != NULL)
-			temp = temp->next;
-		temp->next = new;
-		*alst = list;
+		lst = lst->next;
+		j++;
 	}
+	return (lst);
 }

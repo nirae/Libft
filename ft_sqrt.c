@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/23 17:50:03 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/05 22:59:19 by ndubouil         ###   ########.fr       */
+/*   Created: 2017/12/06 19:47:15 by ndubouil          #+#    #+#             */
+/*   Updated: 2017/12/06 19:50:08 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstaddend(t_list **alst, t_list *new)
+int		ft_sqrt(int n)
 {
-	t_list *temp;
-	t_list *list;
+	int i;
 
-	if (new != NULL)
-	{
-		temp = *alst;
-		list = *alst;
-		while (temp->next != NULL)
-			temp = temp->next;
-		temp->next = new;
-		*alst = list;
-	}
+	i = 0;
+	if (n <= 0)
+		return (0);
+	if (n > 2147395600)
+		return (0);
+	while (i * i < n)
+		i++;
+	if (n == 0)
+		return (0);
+	return (i);
 }
