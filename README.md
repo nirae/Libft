@@ -90,3 +90,7 @@ et ainsi vous faire gagner beaucoup de temps.
 * [x] ft_isgraph
 * [x] ft_str_is_numeric
 * [x] ft_str_is_printable
+* [x] ft_lstaddend
+* [x] ft_lstlen
+* [x] ft_sqrt
+* [x] ft_lsti

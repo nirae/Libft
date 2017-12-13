@@ -6,10 +6,10 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2017/12/13 19:18:48 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/12/13 19:22:18 by ndubouil         ###   ########.fr        #
+#    Updated: 2017/12/06 23:18:17 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 # Binaries
 CC		=	/usr/bin/gcc
 AR		=	/usr/bin/ar
