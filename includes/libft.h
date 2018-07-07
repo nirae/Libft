@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:31:05 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/12/06 23:18:30 by ndubouil         ###   ########.fr       */
+/*   Updated: 2018/07/08 01:31:25 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include "get_next_line.h"
 
 typedef struct		s_list
 {
@@ -27,6 +28,7 @@ typedef struct		s_list
 /*
 ** Libc
 */
+
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
@@ -37,6 +39,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t				ft_strlen(const char *s);
 char				*ft_strdup(const char *s1);
 char				*ft_strcpy(char *dst, const char *src);
+wchar_t				*ft_wstrcpy(wchar_t *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
@@ -60,6 +63,7 @@ int					ft_tolower(int c);
 /*
 ** Additionnals functions
 */
+
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
@@ -88,6 +92,7 @@ void				ft_putnbr_fd(int n, int fd);
 /*
 ** BONUS
 */
+
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
@@ -98,6 +103,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 /*
 ** My functions
 */
+
 int					ft_ispositive(int n);
 int					ft_isupper(int c);
 int					ft_islower(int c);
@@ -119,6 +125,14 @@ void				ft_lstaddend(t_list **alst, t_list *new);
 int					ft_lstlen(t_list *lst);
 int					ft_sqrt(int n);
 t_list				*ft_lsti(t_list *lst, int i);
+<<<<<<< HEAD:libft.h
 >>>>>>> master
+=======
+int					ft_strpos(const char *s, int c);
+char				*ft_itoa_base(int n, int base);
+char				*ft_lli_itoa_base(long long int n, char *base_str);
+char				*ft_ulli_itoa_base(unsigned long long int n,
+						char *base_str);
+>>>>>>> master:includes/libft.h
 
 #endif

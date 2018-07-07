@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   is_valid_flags.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 09:36:10 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/01/11 10:19:33 by ndubouil         ###   ########.fr       */
+/*   Created: 2018/02/12 08:06:04 by ndubouil          #+#    #+#             */
+/*   Updated: 2018/06/24 18:11:29 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-void	ft_putchar(char c)
+int		is_valid_flags(char c)
 {
-	write(1, &c, 1);
+	if (c == '-' || c == '+' || c == '0' || c == ' ' || c == '#')
+		return (TRUE);
+	return (FALSE);
 }

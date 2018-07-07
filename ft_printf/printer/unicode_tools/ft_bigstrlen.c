@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_bigstrlen.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ndubouil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 09:36:10 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/01/11 10:19:33 by ndubouil         ###   ########.fr       */
+/*   Created: 2018/06/24 19:27:54 by ndubouil          #+#    #+#             */
+/*   Updated: 2018/06/24 19:28:37 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-void	ft_putchar(char c)
+int		ft_bigstrlen(wchar_t *str)
 {
-	write(1, &c, 1);
+	int		i;
+	int		len;
+
+	i = -1;
+	len = 0;
+	while (str[++i] != 0)
+		len += ft_bigcharlen(str[i]);
+	return (len);
 }
