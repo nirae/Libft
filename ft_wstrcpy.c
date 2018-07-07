@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_wstrcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 09:36:10 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/01/11 10:19:33 by ndubouil         ###   ########.fr       */
+/*   Created: 2018/06/24 00:22:06 by ndubouil          #+#    #+#             */
+/*   Updated: 2018/06/24 00:25:23 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+wchar_t		*ft_wstrcpy(wchar_t *dst, const char *src)
 {
-	write(1, &c, 1);
+	int i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
 }
