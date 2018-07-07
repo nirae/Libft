@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2018/07/08 01:27:22 by ndubouil         ###   ########.fr        #
+#    Updated: 2018/07/08 01:32:31 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -113,7 +113,8 @@ SRC		=	ft_putchar.c			\
 OBJ		=	$(patsubst %.c,%.o,$(SRC))
 
 HFILES	=	$(H)/libft.h			\
-			$(H)/get_next_line.h
+			$(H)/get_next_line.h	\
+			$(H)/libftprintf.h
 
 # Name
 
