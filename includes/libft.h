@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:31:05 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/07/07 21:08:39 by ndubouil         ###   ########.fr       */
+/*   Updated: 2018/08/29 18:49:32 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include "get_next_line.h"
+# include "btree.h"
 
 typedef struct		s_list
 {
