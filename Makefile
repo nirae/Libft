@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2018/07/08 01:32:31 by ndubouil         ###   ########.fr        #
+#    Updated: 2018/09/14 16:25:05 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ CFLAGS	=	-Wall -Wextra -Werror
 
 H		=	./includes
 P		=	./ft_printf
+T		=	./trees
 
 # Files
 
@@ -108,13 +109,25 @@ SRC		=	ft_putchar.c			\
 	  	ft_lli_itoa_base.c			\
 	  	ft_ulli_itoa_base.c			\
 	  	get_next_line.c				\
-		ft_itoa_base.c
+		ft_itoa_base.c				\
+		$(T)/ft_btree_apply_infix.c		\
+		$(T)/ft_btree_apply_prefix.c		\
+		$(T)/ft_btree_apply_rev_infix.c	\
+		$(T)/ft_btree_apply_suffix.c		\
+		$(T)/ft_btree_create_node.c		\
+		$(T)/ft_btree_del.c				\
+		$(T)/ft_btree_insert_data.c		\
+		$(T)/ft_btree_level_count.c		\
+		$(T)/ft_btree_nodes_count.c		\
+		$(T)/ft_btree_search_item.c		\
+		$(T)/left_rotation.c
 
 OBJ		=	$(patsubst %.c,%.o,$(SRC))
 
 HFILES	=	$(H)/libft.h			\
 			$(H)/get_next_line.h	\
-			$(H)/libftprintf.h
+			$(H)/libftprintf.h		\
+			$(H)/btree.h
 
 # Name
 

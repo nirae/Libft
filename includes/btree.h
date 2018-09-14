@@ -6,11 +6,14 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/04 19:14:55 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/08/29 18:38:41 by ndubouil         ###   ########.fr       */
+/*   Updated: 2018/09/14 16:26:31 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef BTREE_H
+# define BTREE_H
+
+# include "libft.h"
 
 typedef struct		s_btree
 {
@@ -34,3 +37,5 @@ void				ft_btree_apply_suffix(t_btree *tree, void (*func)(void *));
 int					ft_btree_nodes_count(t_btree *tree);
 int					ft_btree_level_count(t_btree *tree);
 t_btree				*left_rotation(t_btree *tree, t_btree *node);
+
+#endif
