@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   print_big_string.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ndubouil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/20 20:00:04 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/06/24 20:08:40 by ndubouil         ###   ########.fr       */
+/*   Updated: 2018/12/18 23:21:15 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static int		print_width(t_env *env, int len)
+static int		print_width(t_envp *env, int len)
 {
 	int				i;
 	int				final_preci;
@@ -40,7 +40,7 @@ static int		print_width(t_env *env, int len)
 	return (TRUE);
 }
 
-static int		precision_pos(t_env *env, int len)
+static int		precision_pos(t_envp *env, int len)
 {
 	int			i;
 	int			big_len;
@@ -66,14 +66,12 @@ static int		precision_pos(t_env *env, int len)
 	return (TRUE);
 }
 
-static int		print_string_with_precision(t_env *env, int len)
+static int		print_string_with_precision(t_envp *env, int len)
 {
 	int				i;
 	char			result[5];
-	int				big_len;
 
 	i = -1;
-	big_len = 0;
 	if (env->flags.precision >= 0)
 	{
 		if (!(precision_pos(env, len)))
@@ -98,7 +96,7 @@ static int		print_string_with_precision(t_env *env, int len)
 ** Printer for flag 'S'
 */
 
-int				print_big_string(t_env *env)
+int				print_big_string(t_envp *env)
 {
 	wchar_t				nullwstr[7];
 	int					len;

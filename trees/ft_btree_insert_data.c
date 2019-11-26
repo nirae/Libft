@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   set_type.c                                         :+:      :+:    :+:   */
+/*   ft_btree_insert_data.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/12 09:22:15 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/06/24 18:20:40 by ndubouil         ###   ########.fr       */
+/*   Created: 2018/08/29 18:44:02 by ndubouil          #+#    #+#             */
+/*   Updated: 2018/08/29 18:44:37 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "btree.h"
 
-/*
-** Type setter
-** Take the string, check if there is a valid flag and fill struct t_flags
-** Return TRUE when finished or FALSE if no flags found
-*/
-
-int		set_type(char *str, t_envp *env)
+void		ft_btree_insert_data(t_btree **tree, t_btree **parent, void *data,
+				int (*cmpf)(void *, void *))
 {
-	if (!is_valid_type(str[env->pos]))
-		return (FALSE);
-	env->flags.type = str[env->pos];
-	env->pos++;
-	return (TRUE);
+	if (*tree == NULL)
+	{
+		*tree = ft_btree_create_node(data);
+		(*tree)->parent = *parent;
+	}
+	else
+	{
+		if ((*cmpf)(data, (*tree)->data) <= 0)
+			ft_btree_insert_data(&(*tree)->left, tree, data, cmpf);
+		else
+			ft_btree_insert_data(&(*tree)->right, tree, data, cmpf);
+	}
 }

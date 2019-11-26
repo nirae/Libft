@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/14 08:41:35 by ndubouil          #+#    #+#              #
-#    Updated: 2018/07/08 01:24:18 by ndubouil         ###   ########.fr        #
+#    Updated: 2019/02/02 21:16:19 by ndubouil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,12 +16,12 @@ CC		=	/usr/bin/gcc
 AR		=	/usr/bin/ar
 RANLIB	=	/usr/bin/ranlib
 RM		=	/bin/rm
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -g3
 
 # Directories
 
 LIB		=	..
-H		=	../includes
+H		=	../include
 PA		=	./parser
 PR		=	./printer
 U_TOOLS	=	./printer/unicode_tools

@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 09:31:05 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/07/08 01:31:25 by ndubouil         ###   ########.fr       */
+/*   Updated: 2019/02/14 23:48:02 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,16 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-# include "get_next_line.h"
+# include "btree.h"
+
+# define FALSE			0
+# define TRUE			1
 
 typedef struct		s_list
 {
 	void			*content;
 	size_t			content_size;
+	struct s_list	*prev;
 	struct s_list	*next;
 }					t_list;
 
@@ -77,6 +81,7 @@ int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strjoin_add(char *s1, char *s2, char c);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
@@ -120,19 +125,19 @@ int					ft_isgraph(int c);
 int					ft_str_is_numeric(char *str);
 int					ft_str_is_printable(char *str);
 void				ft_lstaddend(t_list **alst, t_list *new);
-<<<<<<< HEAD
-=======
 int					ft_lstlen(t_list *lst);
 int					ft_sqrt(int n);
 t_list				*ft_lsti(t_list *lst, int i);
-<<<<<<< HEAD:libft.h
->>>>>>> master
-=======
 int					ft_strpos(const char *s, int c);
 char				*ft_itoa_base(int n, int base);
 char				*ft_lli_itoa_base(long long int n, char *base_str);
 char				*ft_ulli_itoa_base(unsigned long long int n,
 						char *base_str);
->>>>>>> master:includes/libft.h
+int					ft_count(int n);
+void				ft_strtab_del(char ***arr);
+int					ft_strtab_addend(char ***arr, char *elem);
+
+char				*ft_strjoin_free_s1(char **s1, char **s2);
+char				*ft_strjoin_free_s2(char **s1, char **s2);
 
 #endif

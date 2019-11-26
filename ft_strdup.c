@@ -6,7 +6,7 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 14:22:15 by ndubouil          #+#    #+#             */
-/*   Updated: 2017/11/22 15:29:40 by ndubouil         ###   ########.fr       */
+/*   Updated: 2018/09/24 01:17:42 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s1)
 	size_t	size;
 	int		i;
 
+	if (s1 == NULL)
+		return (NULL);
 	size = ft_strlen(s1);
 	if (!(str = ft_strnew(sizeof(char) * size)))
 		return (NULL);

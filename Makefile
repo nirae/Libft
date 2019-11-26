@@ -6,7 +6,7 @@
 #    By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/13 09:16:22 by ndubouil          #+#    #+#              #
-#    Updated: 2018/07/08 01:33:36 by ndubouil         ###   ########.fr        #
+#    Updated: 2019/11/26 17:24:15 by nico             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,12 +16,13 @@ CC		=	/usr/bin/gcc
 AR		=	/usr/bin/ar
 RANLIB	=	/usr/bin/ranlib
 RM		=	/bin/rm
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -g3
 
 # Directories
 
-H		=	./includes
+H		=	./include
 P		=	./ft_printf
+T		=	./trees
 
 # Files
 
@@ -107,14 +108,30 @@ SRC		=	ft_putchar.c			\
 	  	ft_lsti.c					\
 	  	ft_lli_itoa_base.c			\
 	  	ft_ulli_itoa_base.c			\
-	  	get_next_line.c				\
-		ft_itoa_base.c
+		ft_itoa_base.c				\
+		ft_count.c					\
+		ft_strtab_del.c				\
+		ft_strjoin_free_s1.c				\
+		ft_strjoin_free_s2.c				\
+		ft_strjoin_add.c				\
+		ft_strtab_addend.c			\
+		$(T)/ft_btree_apply_infix.c		\
+		$(T)/ft_btree_apply_prefix.c		\
+		$(T)/ft_btree_apply_rev_infix.c	\
+		$(T)/ft_btree_apply_suffix.c		\
+		$(T)/ft_btree_create_node.c		\
+		$(T)/ft_btree_del.c				\
+		$(T)/ft_btree_insert_data.c		\
+		$(T)/ft_btree_level_count.c		\
+		$(T)/ft_btree_nodes_count.c		\
+		$(T)/ft_btree_search_item.c		\
+		$(T)/left_rotation.c
 
 OBJ		=	$(patsubst %.c,%.o,$(SRC))
 
 HFILES	=	$(H)/libft.h			\
-			$(H)/get_next_line.h	\
-			$(H)/libftprintf.h
+			$(H)/libftprintf.h		\
+			$(H)/btree.h
 
 # Name
 

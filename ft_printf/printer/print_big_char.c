@@ -6,18 +6,17 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/14 17:06:45 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/06/26 23:44:44 by ndubouil         ###   ########.fr       */
+/*   Updated: 2018/09/28 15:29:17 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#include <stdio.h>
 
 /*
 ** Printer for flag 'C'
 */
 
-int		print_big_char(t_env *env)
+int		print_big_char(t_envp *env)
 {
 	long long int		i;
 	char				result[5];

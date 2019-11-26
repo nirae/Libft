@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   set_type.c                                         :+:      :+:    :+:   */
+/*   ft_btree_del.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/12 09:22:15 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/06/24 18:20:40 by ndubouil         ###   ########.fr       */
+/*   Created: 2018/08/29 18:39:14 by ndubouil          #+#    #+#             */
+/*   Updated: 2019/01/14 22:46:20 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "btree.h"
 
-/*
-** Type setter
-** Take the string, check if there is a valid flag and fill struct t_flags
-** Return TRUE when finished or FALSE if no flags found
-*/
-
-int		set_type(char *str, t_envp *env)
+void		ft_btree_del(t_btree **tree, void (*del)(void *))
 {
-	if (!is_valid_type(str[env->pos]))
-		return (FALSE);
-	env->flags.type = str[env->pos];
-	env->pos++;
-	return (TRUE);
+	if (!tree || !(*tree))
+		return ;
+	ft_btree_del(&((*tree)->left), del);
+	ft_btree_del(&((*tree)->right), del);
+	del((*tree)->data);
+	ft_memdel((void **)tree);
 }

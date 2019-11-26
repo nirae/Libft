@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   set_type.c                                         :+:      :+:    :+:   */
+/*   ft_count.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/12 09:22:15 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/06/24 18:20:40 by ndubouil         ###   ########.fr       */
+/*   Created: 2018/09/23 22:06:34 by ndubouil          #+#    #+#             */
+/*   Updated: 2018/09/23 23:10:15 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "libft.h"
 
-/*
-** Type setter
-** Take the string, check if there is a valid flag and fill struct t_flags
-** Return TRUE when finished or FALSE if no flags found
-*/
-
-int		set_type(char *str, t_envp *env)
+int	ft_count(int n)
 {
-	if (!is_valid_type(str[env->pos]))
-		return (FALSE);
-	env->flags.type = str[env->pos];
-	env->pos++;
-	return (TRUE);
+	long long int		i;
+
+	i = 1;
+	while (n >= 10)
+	{
+		n = n / 10;
+		i++;
+	}
+	return (i - 1);
 }

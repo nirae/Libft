@@ -6,13 +6,13 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/28 19:54:58 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/06/26 22:20:54 by ndubouil         ###   ########.fr       */
+/*   Updated: 2018/12/18 23:22:20 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static void		print_width(t_env *env, int len)
+static void		print_width(t_envp *env, int len)
 {
 	int				i;
 
@@ -25,12 +25,10 @@ static void		print_width(t_env *env, int len)
 ** Printer for flag 'p'
 */
 
-int				print_address(t_env *env)
+int				print_address(t_envp *env)
 {
-	int			i;
 	int			len;
 
-	i = -1;
 	env->types.ulli = (long long int)va_arg(env->va, void *);
 	env->types.str = ft_lli_itoa_base(env->types.ulli, "0123456789abcdef");
 	if (env->types.str == NULL)

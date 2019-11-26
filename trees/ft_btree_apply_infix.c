@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   set_type.c                                         :+:      :+:    :+:   */
+/*   ft_btree_apply_infix.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/12 09:22:15 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/06/24 18:20:40 by ndubouil         ###   ########.fr       */
+/*   Created: 2018/08/29 18:42:07 by ndubouil          #+#    #+#             */
+/*   Updated: 2018/09/25 17:43:24 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "btree.h"
 
-/*
-** Type setter
-** Take the string, check if there is a valid flag and fill struct t_flags
-** Return TRUE when finished or FALSE if no flags found
-*/
-
-int		set_type(char *str, t_envp *env)
+void		ft_btree_apply_infix(t_btree *tree, void (*func)(void *))
 {
-	if (!is_valid_type(str[env->pos]))
-		return (FALSE);
-	env->flags.type = str[env->pos];
-	env->pos++;
-	return (TRUE);
+	if (tree == NULL)
+		return ;
+	if (tree->left != NULL)
+		ft_btree_apply_infix(tree->left, func);
+	(*func)((void *)tree);
+	if (tree->right != NULL)
+		ft_btree_apply_infix(tree->right, func);
 }

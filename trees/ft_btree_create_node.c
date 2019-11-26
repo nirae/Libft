@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   set_type.c                                         :+:      :+:    :+:   */
+/*   ft_btree_create_node.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/12 09:22:15 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/06/24 18:20:40 by ndubouil         ###   ########.fr       */
+/*   Created: 2018/08/29 18:40:33 by ndubouil          #+#    #+#             */
+/*   Updated: 2018/08/29 18:41:05 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "btree.h"
 
-/*
-** Type setter
-** Take the string, check if there is a valid flag and fill struct t_flags
-** Return TRUE when finished or FALSE if no flags found
-*/
-
-int		set_type(char *str, t_envp *env)
+t_btree		*ft_btree_create_node(void *data)
 {
-	if (!is_valid_type(str[env->pos]))
-		return (FALSE);
-	env->flags.type = str[env->pos];
-	env->pos++;
-	return (TRUE);
+	t_btree		*tree;
+
+	if (!(tree = ft_memalloc(sizeof(t_btree))))
+		return (NULL);
+	tree->parent = NULL;
+	tree->left = NULL;
+	tree->right = NULL;
+	tree->data = data;
+	return (tree);
 }

@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
+/*   ft_strtab_addend.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/23 17:50:03 by ndubouil          #+#    #+#             */
-/*   Updated: 2019/01/22 19:22:22 by ndubouil         ###   ########.fr       */
+/*   Created: 2019/01/20 20:32:48 by ndubouil          #+#    #+#             */
+/*   Updated: 2019/01/20 20:40:18 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstaddend(t_list **alst, t_list *new)
+int		ft_strtab_addend(char ***arr, char *elem)
 {
-	t_list *temp;
-	t_list *list;
+	int		i;
+	char	**tmp;
 
-	if (new != NULL)
-	{
-		temp = *alst;
-		list = *alst;
-		while (temp->next != NULL)
-			temp = temp->next;
-		temp->next = new;
-		new->prev = temp;
-		*alst = list;
-	}
+	if (*arr == NULL || !elem)
+		return (0);
+	i = -1;
+	while ((*arr)[++i])
+		;
+	if (!(tmp = ft_memalloc((i + 2) * sizeof(char *))))
+		return (0);
+	i = -1;
+	while ((*arr)[++i])
+		if (!(tmp[i] = ft_strdup((*arr)[i])))
+			return (0);
+	if (!(tmp[i] = ft_strdup(elem)))
+		return (0);
+	tmp[i + 1] = NULL;
+	ft_strtab_del(arr);
+	*arr = tmp;
+	return (1);
 }

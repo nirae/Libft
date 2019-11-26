@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   set_type.c                                         :+:      :+:    :+:   */
+/*   ft_btree_search_item.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/12 09:22:15 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/06/24 18:20:40 by ndubouil         ###   ########.fr       */
+/*   Created: 2018/08/29 18:47:30 by ndubouil          #+#    #+#             */
+/*   Updated: 2018/08/29 18:47:58 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "btree.h"
 
-/*
-** Type setter
-** Take the string, check if there is a valid flag and fill struct t_flags
-** Return TRUE when finished or FALSE if no flags found
-*/
-
-int		set_type(char *str, t_envp *env)
+void		*ft_btree_search_item(t_btree *tree, void *ref,
+				int (*cmpf)(void *, void *))
 {
-	if (!is_valid_type(str[env->pos]))
-		return (FALSE);
-	env->flags.type = str[env->pos];
-	env->pos++;
-	return (TRUE);
+	static void *result = NULL;
+
+	if ((*cmpf)(ref, tree->data) == 0)
+		return (tree->data);
+	if (tree->left != NULL)
+		result = ft_btree_search_item(tree->left, ref, cmpf);
+	if (tree->right != NULL)
+		result = ft_btree_search_item(tree->right, ref, cmpf);
+	return (result);
 }

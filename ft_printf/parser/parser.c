@@ -6,13 +6,13 @@
 /*   By: ndubouil <ndubouil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/26 23:25:48 by ndubouil          #+#    #+#             */
-/*   Updated: 2018/06/26 23:26:08 by ndubouil         ###   ########.fr       */
+/*   Updated: 2019/02/02 21:15:12 by ndubouil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int		parser(char *str, t_env *env)
+int		parser(char *str, t_envp *env)
 {
 	init_flags(env);
 	set_flags(str, env);
